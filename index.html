@@ -7,7 +7,6 @@
         <h1>BGP - The Backbone of the Internet</h1>
 <p>Border Gateway Protocol (BGP) is a standardized exterior gateway protocol designed to exchange routing and reachability information among autonomous systems (AS) on the Internet. BGP is classified as a path-vector routing protocol, and it makes routing decisions based on paths, network policies, or rule-sets configured by a network administrator.</p>
 <p>When someone drops a letter into a mailbox, the Postal Service processes that piece of mail and chooses a fast, efficient route to deliver that letter to its recipient. Similarly, when someone submits data via the Internet, <strong>BGP is responsible for looking at all of the available paths</strong> that data could travel and <em>picking the best route,</em> which usually means hopping between autonomous systems.</p>
-<br />
 <h2>What is an Autonomous System?</h2>
 <p>If we continue to think of BGP as the Postal Service of the Internet, each AS is like an individual post office branch. A town may have hundreds of mailboxes, but the mail in those boxes must go through the local postal branch before being routed to another destination. The internal routers within an AS are like mailboxes. They forward their outbound transmissions to the AS, which then uses BGP routing to get these transmissions to their destinations.</p>
 <br />
@@ -26,5 +25,22 @@
     </ul>
 </p>
 <p>Because of this, every AS must be kept up to date with information regarding new routes as well as obsolete routes. This is done through peering sessions where each AS connects to neighboring ASes with a <a href="https://www.cloudflare.com/en-gb/learning/ddos/glossary/tcp-ip/" target="_blank">TCP/IP</a> connection for the purpose of sharing routing information. Using this information, each AS is equipped to properly route outbound data transmissions coming from within.</p>
+<h3>BGP Facts</h3>
+<ul>
+    <li>There are two types of BGP:
+        <ol>
+            <li>eBGP</li>
+            <li>iBGP</li>
+        </ol>
+    </li>
+    <br />
+    <li>It is an interesting fact that the interface from which the BGP router ID is taken does not have to be running BGP. Any valid IP address can be used as BGP router-id, even an address that is not locally configured on the router.
+        <ul>
+            <li>If you are talking about the router-id, it must be the same as the OSPF router-id for redistributing the routes from OSPF to BGP or vice versa.</li>
+            <li>If the network command is configured with the subnet mask option under the GBP process, then an exact match must exist in the IP routing table in order to advertise this route into BGP.</li>
+        </ul>
+    </li>
+    <li>Let's talk about the redistribution. While redistributing OSPF into BGP, by default only OSPF intra-area and inter-area routes are redistributed into BGP.</li>
+</ul>
 </body>
 </html>
