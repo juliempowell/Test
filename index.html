@@ -3,7 +3,7 @@
     <head>
     <title>BGP</title>
     </head>
-    <body>
+    <p>
         <h1>BGP - The Backbone of the Internet</h1>
 <p>Border Gateway Protocol (BGP) is a standardized exterior gateway protocol designed to exchange routing and reachability information among autonomous systems (AS) on the Internet. BGP is classified as a path-vector routing protocol, and it makes routing decisions based on paths, network policies, or rule-sets configured by a network administrator.</p>
 <p>When someone drops a letter into a mailbox, the Postal Service processes that piece of mail and chooses a fast, efficient route to deliver that letter to its recipient. Similarly, when someone submits data via the Internet, <strong>BGP is responsible for looking at all of the available paths</strong> that data could travel and <em>picking the best route,</em> which usually means hopping between autonomous systems.</p>
@@ -11,19 +11,18 @@
 <p>If we continue to think of BGP as the Postal Service of the Internet, each AS is like an individual post office branch. A town may have hundreds of mailboxes, but the mail in those boxes must go through the local postal branch before being routed to another destination. The internal routers within an AS are like mailboxes. They forward their outbound transmissions to the AS, which then uses BGP routing to get these transmissions to their destinations.</p>
 <br />
 <img src="BGPimage.jpeg" width="600">
+<br />
 <p>The diagram above illustrates a simplified version of BGP. In this version there are only six ASes on the Internet. If AS1 needs to route a packet to AS3, it has two different options:
     <ol>
         <li>Hopping to AS2 and then to AS3</li>
         <li>Hopping to AS6, then to AS5, AS4, and finally to AS3</li>
-    </ol>
-</p>
+    </ol></p>
 <p>In this simplified model, the decision seems straightforward. The AS2 route requires fewer hops than the AS6 route, and therefore it is the quickest, most efficient route. Now imagine that there are hundreds of thousands of ASes and that hop count is only one part of a complex route selection algorithm. That is the reality of BFP routing on the Internet.</p>
 <p>Keep in mind that the structure of the Internet is constantly changing:
     <ul>
         <li>New systems and networks are being created</li>
         <li>Systems and networks are going offline</li>
-    </ul>
-</p>
+    </ul></p>
 <p>Because of this, every AS must be kept up to date with information regarding new routes as well as obsolete routes. This is done through peering sessions where each AS connects to neighboring ASes with a <a href="https://www.cloudflare.com/en-gb/learning/ddos/glossary/tcp-ip/" target="_blank">TCP/IP</a> connection for the purpose of sharing routing information. Using this information, each AS is equipped to properly route outbound data transmissions coming from within.</p>
 <h3>BGP Facts</h3>
 <ul>
