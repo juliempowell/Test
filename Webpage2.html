@@ -6,11 +6,11 @@
 <body>
     <h1>iBGP</h1>
     <h2>What does Internal Border Gateway Protocol (iBGP) Mean?</h2>
-    <p>iBGP is a Border Gateway Protocol (BGP) extension</p>
+    <p>iBGP is a Border Gateway Protocol (BGP) extension. When two BGP-enabled devices are in the same autonomous system (AS), the BGP session is called an <em>internal</em> BGP session, or iBGP session. BGP uses the same message types on iBGP and external BGP (eBGP) sessions, but the rules for when to send each message and how to interpret each message differ slightly. For this reason, some people refer to iBGP and eBGP as two separate protocols.</p>
     <h2>Explaining iBGP</h2>
-    <p>iBGP...</p>
-    <p>iBGP...</p>
+    <p>The purpose of iBGP is to provide a means by which eBGP route advertisements can be forwarded throughout the network. In theory, to accomplish this task you could redistribute all of your eBGP routes into an interior gateway protocol (IGP), such as OSPF or IS-IS. This, however, is not recommended in a production environment because of the large number of eBGP routes in the Internet and because of the way that IGPs operate. In short, with that many routes the IGP churns or crashes.</p>
+    <p>Generally, the loopback interface (loO) is used to establish connections between iBGP peers. The loopback interface is always us as long as the device is operating. If there is a route to the loopback address, the iBGP peering session stays up. If a physical interface address is used instead and that interface goes up and down, teh iBGP peering session also goes up and down. Thus, the loopback interface provides fault tolerance in case the physical interface or the link goes down, if the device has link redundancy.</p>
     <h2>Configuring iBGP</h2>
-    
+    <img src="iBGP copy 2.jpeg" width="600">
 </body>
 </html>
