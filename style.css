@@ -1,15 +1,34 @@
-h1{color:navy}
+h1{color:navy; border: 5px navy solid; padding-left: 10px;}
 
 h2{color:azure}
 
-h3{color:navy}
+h3{color:navy; font-style:italic}
+
+img{align: center}
+
+a{color:white}
+
+a:hover{color: darksalmon;}
+
+a:visited{color:darkmagenta}
 
 body{background-color:lightblue;
 color:navy;
 
 font-family: Arial, Helvetica, sans-serif;
+margin:0;
 }
 
-.container {width:80%; margin: auto; align: center;}
+.container {width:90%; margin: auto; align: center;}
 
-.box-1 {background-color:navy; color:aliceblue; border: 5px white solid}
+.box-1 {background-color:navy; color:aliceblue; border: 5px white solid; padding-left: 10px}
+
+#navbar{background-color: aliceblue; color:dodgerblue}
+
+#navbar ul{padding:0; list-style:none;}
+
+#navbar li{display: inline;}
+
+#navbar a{color:navy; text-decoration:none; font-size:16px; padding-right:15px;}
+
+#main-header{background-color:coral; color:white; padding-left:75px; padding-top:1px; padding-bottom:1px; font-size:30px; margin:0;}
